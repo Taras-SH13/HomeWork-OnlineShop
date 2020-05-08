@@ -6,7 +6,7 @@ import model.User;
 import model.UserRole;
 import service.UserService;
 import service.UserServiceImpl;
-
+import dao.UserFileDaoImpl;
 import java.util.Scanner;
 
 public class LoginMenu implements Menu {
@@ -38,8 +38,10 @@ public class LoginMenu implements Menu {
                     break;
                 case "9":
                     back();break;
+
                 case "0":
-                    exitProgram(); break;
+                   exitProgram(); break;
+
 
             }
         }
