@@ -3,6 +3,7 @@ package view;
 import dao.ProductDao;
 import dao.ProductInMemDaoImpl;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
@@ -22,7 +23,7 @@ public class ProductMenu implements Menu {
 
 
     @Override
-    public void show() {
+    public void show() throws IOException {
         while (true) {
             for (String item : menuItems) {
                 System.out.println(item);
@@ -67,7 +68,7 @@ public class ProductMenu implements Menu {
     }
 
     @Override
-    public void back() {
+    public void back() throws IOException {
         new LoginMenu().show();
     }
 }

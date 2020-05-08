@@ -1,10 +1,11 @@
 package view;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public interface Menu {
-    void show();
-    void back();
+    void show() throws IOException;
+    void back() throws IOException;
 
     default void exitProgram() {
         System.exit(0);

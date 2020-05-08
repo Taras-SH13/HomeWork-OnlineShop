@@ -7,6 +7,8 @@ import model.UserRole;
 import service.UserService;
 import service.UserServiceImpl;
 import dao.UserFileDaoImpl;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class LoginMenu implements Menu {
@@ -16,12 +18,13 @@ public class LoginMenu implements Menu {
     String[] menuItems = new String[]{
             "1. Login",
             "2. Register",
+            "3. Записать в текстовый файл и вывести на экран",
             "9. Back",
             "0. Exit"
     };
 
     @Override
-    public void show() {
+    public void show() throws IOException {
         while (true) {
             for (String item : menuItems) {
                 System.out.println(item);
@@ -36,6 +39,10 @@ public class LoginMenu implements Menu {
                 case "2":
                     registerSubMenu();
                     break;
+                case "3":
+                    UserFileDaoImpl test=new UserFileDaoImpl();
+                    test.userFileDaoImpl();
+                    break;
                 case "9":
                     back();break;
 
@@ -48,7 +55,7 @@ public class LoginMenu implements Menu {
 
     }
 
-    private void registerSubMenu() {
+    private void registerSubMenu() throws IOException {
         System.out.println("your login:");
         String login = scanner.nextLine();
 
@@ -88,7 +95,7 @@ public class LoginMenu implements Menu {
     }
 
 
-    private void loginSubMenu() {
+    private void loginSubMenu() throws IOException {
         System.out.println("your login:");
         String login = scanner.nextLine();
 

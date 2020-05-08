@@ -21,7 +21,7 @@ public class UserFileDaoImpl {
         FileWriter writer = new FileWriter(file);
         for (Map.Entry<String, User> entry : UserInMemDAO.userMap.entrySet()) {
             // Запись содержимого в файл
-            writer.write("Name =  " + entry.getKey() + " Value = " + entry.getValue() + System.getProperty("line.separator"));
+            writer.write("Пользователь -  " + entry.getKey() + " Описание : " + entry.getValue() + System.getProperty("line.separator"));
             writer.flush();
             writer.close();
 
