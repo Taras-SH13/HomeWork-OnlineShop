@@ -1,9 +1,6 @@
 package dao;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 import model.User;
 import model.UserRole;
@@ -13,18 +10,28 @@ import java.util.Map;
 
 public class UserFileDAOImplVer2 implements UserDAO {
 
-    static Map<String, User> userMap = new HashMap<>();
+    static Map<String, User> userMap2 = new HashMap<>();
 
     static {
-        userMap.put("admin", new User("admin", "admin", UserRole.ADMIN));
+        userMap2.put("admin", new User("admin", "admin", UserRole.ADMIN));
     }
 
-    public void write(User user) {
+    public static void writeInFile() {
+        for (Map.Entry<String, User> entry : UserFileDAOImplVer2.userMap2.entrySet()) {
+            UserFileDAOImplVer2.write(entry.getValue());
+            System.out.println(entry.getKey());
+        }
+    }
+
+
+    public static void write(User user) {
         try {
             FileOutputStream outputStream = new FileOutputStream("user.txt");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(user);
+            outputStream.close();
             objectOutputStream.close();
+
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
         } catch (IOException e) {
@@ -35,22 +42,23 @@ public class UserFileDAOImplVer2 implements UserDAO {
 
     @Override
     public void save(User user) {
+        userMap2.put(user.getUsername(), user);
 
     }
 
     @Override
     public void update(User user) {
-
+        userMap2.put(user.getUsername(), user);
     }
 
     @Override
     public void delete(User user) {
-
+        userMap2.remove(user.getUsername());
     }
 
     @Override
     public User get(String username) {
-        return null;
+        return userMap2.get(username);
     }
 }
 

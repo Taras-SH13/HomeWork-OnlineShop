@@ -1,6 +1,7 @@
 package service;
 
 import dao.UserDAO;
+import dao.UserFileDAOImplVer2;
 import dao.UserInMemDAO;
 import model.Response;
 import model.User;
@@ -12,7 +13,8 @@ public class UserServiceImpl implements UserService {
 
     public static final String EMPTY_USERNAME_OR_AND_PASSWORD = "empty username or/and password ";
     public static final String YOU_HAVE_WEAK_PASSWORD = "You have weak password";
-    private UserDAO userDao = new UserInMemDAO();
+    //private UserDAO userDao = new UserInMemDAO();
+    private UserDAO userDao = new UserFileDAOImplVer2();
     Pattern passwordPattern =  Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$");
 
 

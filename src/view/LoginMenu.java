@@ -1,5 +1,6 @@
 package view;
 
+import dao.UserFileDAOImplVer2;
 import model.Gender;
 import model.Response;
 import model.User;
@@ -42,6 +43,7 @@ public class LoginMenu implements Menu {
                     break;
 
                 case "0":
+                    UserFileDAOImplVer2.writeInFile();
                     exitProgram();
                     break;
 
