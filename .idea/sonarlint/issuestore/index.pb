@@ -25,3 +25,17 @@ L
 src/service/UserService.java,2\6\269a5caee93e93cbb6140dfdc01b7b5a858c3de2
 P
  src/service/UserServiceImpl.java,e\d\ed27c32a27f4199abc6981c228ec0b5ee77a7123
+P
+ src/dao/ProductInMemDaoImpl.java,9\2\92c342a48fb3a5a4b1c7ffc05a5bda8d667c01a5
+G
+src/dao/ProductDao.java,a\f\afcda46c36bd67c10ba08ae044dbeee370080df3
+D
+src/dao/UserDAO.java,f\f\ff7c8130bd54405ec8dc06730a844e82699c6358
+I
+src/dao/UserInMemDAO.java,f\7\f736b092e2f1593d6f872e790fb89791d5d9e38d
+L
+src/dao/UserFileDaoImpl.java,d\a\da2f91d0e733b147c87b971076bd8349d7a0d4a7
+<
+src/user.txt,8\d\8dee5509344a6806777c63b8ed3bb418229d737c
+P
+ src/dao/UserFileDAOImplVer2.java,d\9\d9ac318e52cbbaead472ede6d6eeb8dc0711d46d
