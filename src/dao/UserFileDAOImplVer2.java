@@ -19,7 +19,7 @@ public class UserFileDAOImplVer2 implements UserDAO {
     public static void writeInFile() {
         for (Map.Entry<String, User> entry : UserFileDAOImplVer2.userMap2.entrySet()) {
             UserFileDAOImplVer2.write(entry.getValue());
-            System.out.println(entry.getKey());
+
         }
     }
 

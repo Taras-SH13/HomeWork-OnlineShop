@@ -7,7 +7,6 @@ import model.User;
 import model.UserRole;
 import service.UserService;
 import service.UserServiceImpl;
-import dao.UserFileDaoImpl;
 
 import java.io.IOException;
 import java.util.Scanner;
