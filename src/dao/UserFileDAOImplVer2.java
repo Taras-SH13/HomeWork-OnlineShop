@@ -2,6 +2,7 @@ package dao;
 
 import java.io.*;
 
+
 import model.User;
 import model.UserRole;
 
@@ -10,26 +11,32 @@ import java.util.Map;
 
 public class UserFileDAOImplVer2 implements UserDAO {
 
+
     static Map<String, User> userMap2 = new HashMap<>();
 
     static {
         userMap2.put("admin", new User("admin", "admin", UserRole.ADMIN));
     }
 
+
+
+
     public static void writeInFile() {
         for (Map.Entry<String, User> entry : UserFileDAOImplVer2.userMap2.entrySet()) {
             UserFileDAOImplVer2.write(entry.getValue());
-
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
         }
     }
 
 
     public static void write(User user) {
         try {
-            FileOutputStream outputStream = new FileOutputStream("user.txt");
+            FileOutputStream outputStream = new FileOutputStream("user.txt", true);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(user);
             outputStream.close();
+            objectOutputStream.flush();
             objectOutputStream.close();
 
         } catch (FileNotFoundException e) {
@@ -37,6 +44,21 @@ public class UserFileDAOImplVer2 implements UserDAO {
         } catch (IOException e) {
             System.out.println("Error initializing stream");
         }
+    }
+
+    public static void readFromFile() throws IOException {
+        FileInputStream fis = new FileInputStream("user.txt");
+        ObjectInputStream oin = new ObjectInputStream(fis);
+        while (true) {
+
+            try {
+                UserFileDAOImplVer2.userMap2.put(((User) oin.readObject()).getUsername(), (User) oin.readObject());
+            } catch (EOFException | ClassNotFoundException e) {
+                break;
+            }
+        }
+
+        fis.close();
     }
 
 

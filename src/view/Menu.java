@@ -1,5 +1,7 @@
 package view;
 
+import dao.UserFileDAOImplVer2;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -8,6 +10,7 @@ public interface Menu {
     void back() throws IOException;
 
     default void exitProgram() {
+        UserFileDAOImplVer2.writeInFile();
         System.exit(0);
     }
 
