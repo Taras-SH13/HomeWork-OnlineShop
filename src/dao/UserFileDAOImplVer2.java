@@ -49,10 +49,13 @@ public class UserFileDAOImplVer2 implements UserDAO {
     public static void readFromFile() throws IOException {
         FileInputStream fis = new FileInputStream("user.txt");
         ObjectInputStream oin = new ObjectInputStream(fis);
+        User user=null;
         while (true) {
 
             try {
-                UserFileDAOImplVer2.userMap2.put(((User) oin.readObject()).getUsername(), (User) oin.readObject());
+                user=(User)oin.readObject();
+                userMap2.put(user.getUsername(),user);
+
             } catch (EOFException | ClassNotFoundException e) {
                 break;
             }
