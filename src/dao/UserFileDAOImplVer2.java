@@ -32,12 +32,13 @@ public class UserFileDAOImplVer2 implements UserDAO {
 
     public static void write(User user) {
         try {
-            FileOutputStream outputStream = new FileOutputStream("user.txt", true);
+            FileOutputStream outputStream = new FileOutputStream("user.txt", false);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(user);
-            outputStream.close();
+
             objectOutputStream.flush();
             objectOutputStream.close();
+            outputStream.close();
 
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
@@ -49,12 +50,15 @@ public class UserFileDAOImplVer2 implements UserDAO {
     public static void readFromFile() throws IOException {
         FileInputStream fis = new FileInputStream("user.txt");
         ObjectInputStream oin = new ObjectInputStream(fis);
-        User user=null;
+
         while (true) {
 
             try {
+                User user;
                 user=(User)oin.readObject();
                 userMap2.put(user.getUsername(),user);
+                System.out.println(userMap2.get(user));
+                System.out.println(userMap2.values());
 
             } catch (EOFException | ClassNotFoundException e) {
                 break;

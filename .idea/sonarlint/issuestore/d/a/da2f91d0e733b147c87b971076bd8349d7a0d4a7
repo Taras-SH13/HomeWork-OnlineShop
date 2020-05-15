@@ -1,0 +1,16 @@
+
+e
+java:S2095"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(´ˆâë8Ù¹è˜Ÿ.
+^
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ó²¹ÿ8Ù¹è˜Ÿ.
+L
+java:S1128
+"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8Ô°»–Ÿ.
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8¸Áû•Ÿ.
+U	java:S106""9Replace this use of System.out or System.err by a logger.(ÒÊÑÅ8Ù¹è˜Ÿ.
+j
+java:S2095"HUse try-with-resources or close this "FileReader" in a "finally" clause.(ÕÇƒ—øÿÿÿÿ8Ù¹è˜Ÿ.
+c	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8Ù¹è˜Ÿ.
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(«ÄÀíûÿÿÿÿ8âè•Ÿ.
