@@ -35,33 +35,6 @@ public class UserFileDAOImplVer2 implements UserDAO {
         }
     }
 
-    public static void writeInFile() {
-
-
-        for (Map.Entry<String, User> entry : UserFileDAOImplVer2.userMap2.entrySet()) {
-            UserFileDAOImplVer2.write(entry.getValue());
-            System.out.println(entry.getKey());
-            System.out.println(entry.getValue());
-        }
-    }
-
-
-    public static void write(User user) {
-        try {
-            FileOutputStream outputStream = new FileOutputStream("user.txt", false);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
-            objectOutputStream.writeObject(user);
-
-            objectOutputStream.flush();
-            objectOutputStream.close();
-            outputStream.close();
-
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found");
-        } catch (IOException e) {
-            System.out.println("Error initializing stream");
-        }
-    }
 
     public static void readFromFile() throws IOException {
         FileInputStream fis = new FileInputStream("myObjects.txt");
