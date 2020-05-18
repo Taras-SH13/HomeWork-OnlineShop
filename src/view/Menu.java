@@ -10,7 +10,8 @@ public interface Menu {
     void back() throws IOException;
 
     default void exitProgram() {
-        UserFileDAOImplVer2.writeInFile();
+        //UserFileDAOImplVer2.writeInFile();
+        UserFileDAOImplVer2.writeObjectInFile();
         System.exit(0);
     }
 

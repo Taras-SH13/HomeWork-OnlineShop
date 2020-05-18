@@ -18,10 +18,26 @@ public class UserFileDAOImplVer2 implements UserDAO {
         userMap2.put("admin", new User("admin", "admin", UserRole.ADMIN));
     }
 
+    public static void writeObjectInFile() {
+        try {
 
-
+            FileOutputStream f = new FileOutputStream(new File("myObjects.txt"));
+            ObjectOutputStream o = new ObjectOutputStream(f);
+            for (Map.Entry<String, User> entry : UserFileDAOImplVer2.userMap2.entrySet()) {
+                o.writeObject(entry.getValue());
+                System.out.println(entry.getKey());
+                System.out.println(entry.getValue());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("Error initializing stream");
+        }
+    }
 
     public static void writeInFile() {
+
+
         for (Map.Entry<String, User> entry : UserFileDAOImplVer2.userMap2.entrySet()) {
             UserFileDAOImplVer2.write(entry.getValue());
             System.out.println(entry.getKey());
@@ -48,17 +64,16 @@ public class UserFileDAOImplVer2 implements UserDAO {
     }
 
     public static void readFromFile() throws IOException {
-        FileInputStream fis = new FileInputStream("user.txt");
+        FileInputStream fis = new FileInputStream("myObjects.txt");
         ObjectInputStream oin = new ObjectInputStream(fis);
 
         while (true) {
 
             try {
                 User user;
-                user=(User)oin.readObject();
-                userMap2.put(user.getUsername(),user);
-                System.out.println(userMap2.get(user));
-                System.out.println(userMap2.values());
+                user = (User) oin.readObject();
+                userMap2.put(user.getUsername(), user);
+
 
             } catch (EOFException | ClassNotFoundException e) {
                 break;

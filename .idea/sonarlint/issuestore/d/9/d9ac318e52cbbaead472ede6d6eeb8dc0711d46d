@@ -1,15 +1,17 @@
 
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¨ØÎûÿÿÿÿ8´…ºÊ .
-
-java:S1186%"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ê½’8ÓíÀÊ .
-p
-java:S2095"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(€ğ±Íúÿÿÿÿ8´…ºÊ .
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(¨ØÎûÿÿÿÿ8ÜÄê¹¡.
+l
+java:S20954"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(šÁ¡8Õß«º¡.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(§Ê°üÿÿÿÿ8ÜÄê¹¡.
+k
+java:S2095#"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(î†™É8ÜÄê¹¡.
+D
+java:S21896""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8Û£¸º¡.
+T	java:S106<"9Replace this use of System.out or System.err by a logger.(œáÌ]8ùÊš»¡.
+Z	java:S106."9Replace this use of System.out or System.err by a logger.(„¼ùüÿÿÿÿ8ÜÄê¹¡.
+Z	java:S106="9Replace this use of System.out or System.err by a logger.(è´…şÿÿÿÿ8ùÊš»¡.
+h
+java:S1192"FDefine a constant instead of duplicating this literal "admin" 3 times.(ò¶Øúÿÿÿÿÿ8ÜÄê¹¡.
 r
-java:S2095"PUse try-with-resources or close this "ObjectOutputStream" in a "finally" clause.(ĞÆÈ¦şÿÿÿÿ8´…ºÊ .
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(„¼ùüÿÿÿÿ8´…ºÊ .
-b
-java:S1192"FDefine a constant instead of duplicating this literal "admin" 3 times.(¥ÃÒ18µ¼ .
-£
-java:S1186*"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(óç„¶ûÿÿÿÿ8ÓíÀÊ .
-£
-java:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…·Ëéúÿÿÿÿ8ÓíÀÊ .
+java:S2095$"PUse try-with-resources or close this "ObjectOutputStream" in a "finally" clause.(ĞÆÈ¦şÿÿÿÿ8ÜÄê¹¡.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(şø¹‰8ÜÄê¹¡.

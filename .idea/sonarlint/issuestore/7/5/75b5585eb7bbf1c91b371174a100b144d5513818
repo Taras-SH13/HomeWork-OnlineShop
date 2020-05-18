@@ -1,15 +1,15 @@
 
 N	java:S106`"9Replace this use of System.out or System.err by a logger.(Ò­¦·
-N	java:S106"9Replace this use of System.out or System.err by a logger.(Òà´Ç
-N	java:S106="9Replace this use of System.out or System.err by a logger.(¯ŒÇ°
-N	java:S106f"9Replace this use of System.out or System.err by a logger.(ı¾¤Ì
-S	java:S106]"9Replace this use of System.out or System.err by a logger.(’Íäøÿÿÿÿ
-M
-java:S1128	"0Remove this unused import 'dao.UserFileDaoImpl'.(øÎñÕ8è¥Ë .
-<	java:S131!""Add a default case to this switch.(Ü×ºáøÿÿÿÿ
-N	java:S106i"9Replace this use of System.out or System.err by a logger.(½±Òì
-S	java:S106S"9Replace this use of System.out or System.err by a logger.(®Ã®ˆşÿÿÿÿ
 N	java:S106"9Replace this use of System.out or System.err by a logger.(Ó—ı‡
-S	java:S1067"9Replace this use of System.out or System.err by a logger.(’Íäøÿÿÿÿ
 S	java:S106M"9Replace this use of System.out or System.err by a logger.(ŞÃ»Üøÿÿÿÿ
+N	java:S106f"9Replace this use of System.out or System.err by a logger.(ı¾¤Ì
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(’Íäøÿÿÿÿ
+N	java:S106="9Replace this use of System.out or System.err by a logger.(¯ŒÇ°
+S	java:S106S"9Replace this use of System.out or System.err by a logger.(®Ã®ˆşÿÿÿÿ
+N	java:S106i"9Replace this use of System.out or System.err by a logger.(½±Òì
 N	java:S106:"9Replace this use of System.out or System.err by a logger.(Ò­¦·
+<	java:S131!""Add a default case to this switch.(Ü×ºáøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Òà´Ç
+S	java:S106]"9Replace this use of System.out or System.err by a logger.(’Íäøÿÿÿÿ
+Q
+java:S1128"4Remove this unused import 'dao.UserFileDAOImplVer2'.(ĞĞã¦8µ×ê¹¡.
